@@ -292,7 +292,7 @@ tbody td.coff{opacity:.2}
           <div class="cbadge" style="background:#1C5A3A">EcoVadis</div>
           <div class="cnm">EcoVadis Rating</div>
           <div class="csc" data-ko="지속가능경영 외부 평가등급" data-en="Sustainability Rating (External)">지속가능경영 외부 평가등급</div>
-          <div class="cst"><span data-ko="사업장" data-en="Sites">사업장</span> <em>4</em></div>
+          <div class="cst"><span data-ko="사업장" data-en="Sites">사업장</span> <em>3</em></div>
         </div>
       </div>
     </div>
@@ -419,13 +419,13 @@ const EXPIRY = {
   grs:      '2026-10-29',
   iso14:    '2026-11-06',
   iso45:    '2026-11-08',
-  oeko:     '2026-04-15',
-  sgs:      null,
+  oeko:     '2026-11-15',
+  sgs:      '2027-06-15',
   zdhc:     '2026-02-14',
   family:   '2028-11-30',
   iso9:     '2026-11-06',
   ecolabel: '2029-01-04',
-  ecovadis: '2026-04-30'
+  ecovadis: '2026-10-31'
 };
 
 const DATA = {
@@ -533,7 +533,6 @@ const DATA = {
       {name:'튀르키예스판 (일반)',expiry:'2027-08-31'},
       {name:'동나이 (재생)',expiry:'2026-12-31'},
       {name:'동나이 (일반)',expiry:'2026-11-25'},
-      {name:'동나이나일론 (재생)',expiry:'2026-04-16'},
       {name:'동나이나일론 (일반)',expiry:'2026-11-16'},
       {name:'브라질스판',expiry:'2027-01-31'}
     ]},
@@ -552,17 +551,16 @@ const DATA = {
       {name:'Hyosung Istanbul TEKSTIL LTD.STI (Original)',expiry:'2027-08-31'},
       {name:'Hyosung Dong Nai Co., Ltd. (Recycled)',expiry:'2026-12-31'},
       {name:'Hyosung Dong Nai Co., Ltd. (Original)',expiry:'2026-11-25'},
-      {name:'Hyosung Dong Nai Nylon Company Limited (Recycled)',expiry:'2026-04-16'},
       {name:'Hyosung Dong Nai Nylon Company Limited (Original)',expiry:'2026-11-16'},
       {name:'Hyosung Brasil Indústria e Comércio de Fibras Ltda.',expiry:'2027-01-31'}
     ]}
   },
   sgs:{
-    ko:{title:'SGS ECO PRODUCT',cycle:'매년 갱신',sites:[
-      {name:'본사 (리젠 바이오 스판덱스)',expiry:null}
+    ko:{title:'SGS ECO PRODUCT',cycle:'5년 주기',sites:[
+      {name:'본사 (리젠 바이오 스판덱스)',expiry:'2027-06-15'}
     ]},
-    en:{title:'SGS ECO PRODUCT',cycle:'Annual renewal',sites:[
-      {name:'Hyosung TNC — Regen Bio-Spandex',expiry:null}
+    en:{title:'SGS ECO PRODUCT',cycle:'5-year cycle',sites:[
+      {name:'Hyosung TNC — Regen Bio-Spandex',expiry:'2027-06-15'}
     ]}
   },
   zdhc:{
@@ -629,13 +627,11 @@ const DATA = {
     ko:{title:'EcoVadis 지속가능경영 평가등급',cycle:'매년 갱신',sites:[
       {name:'본사',              grade:'bronze',    score:64, period:'2026-01'},
       {name:'동나이',            grade:'silver',    score:73, period:'2026-02'},
-      {name:'가흥스판',          grade:'bronze',    score:61, period:'2025-04'},
       {name:'가흥화공',          grade:'committed', score:48, period:'2025-10'}
     ]},
     en:{title:'EcoVadis Sustainability Rating',cycle:'Annual renewal',sites:[
       {name:'Hyosung TNC',                                  grade:'bronze',    score:64, period:'2026-01'},
       {name:'Hyosung Dong Nai Co., Ltd.',                   grade:'silver',    score:73, period:'2026-02'},
-      {name:'Hyosung Spandex (Jiaxing) Co., Ltd.',          grade:'bronze',    score:61, period:'2025-04'},
       {name:'Hyosung Chemicals (Jiaxing) Co., Ltd.',        grade:'committed', score:48, period:'2025-10'}
     ]}
   }
@@ -650,7 +646,7 @@ const MATRIX = [
   ['울산공장',         'Hyosung TNC - Ulsan Plant',                                  '한국','Korea',    [1,1,1,0,0,0,1,0,0,0], 'plant'],
   ['대구공장',         'Hyosung TNC - Daegu Plant',                                  '한국','Korea',    [0,0,0,0,0,1,1,1,0,0], 'plant'],
   ['가흥화공',         'Hyosung Chemicals (Jiaxing) Co., Ltd.',                      '중국','China',    [1,1,1,'committed',0,0,0,0,0,0], 'plant'],
-  ['가흥스판',         'Hyosung Spandex (Jiaxing) Co., Ltd.',                        '중국','China',    [1,1,1,'bronze',0,0,0,0,0,0], 'plant'],
+  ['가흥스판',         'Hyosung Spandex (Jiaxing) Co., Ltd.',                        '중국','China',    [1,1,1,0,0,0,0,0,0,0], 'plant'],
   ['취저우NF3',        'Hyosung New Material & High Technology (Quzhou) Co., Ltd.',            '중국','China',    [1,1,1,0,0,0,0,0,0,0], 'plant'],
   ['취저우스판',        'Hyosung Spandex (Quzhou) Co., Ltd.',                                  '중국','China',    [0,0,0,0,0,0,0,1,0,0], 'plant'],
   ['튀르키예스판',     'Hyosung Istanbul TEKSTIL LTD.STI',                           '튀르키예','Türkiye',[1,1,1,0,0,0,1,1,0,0], 'plant'],
